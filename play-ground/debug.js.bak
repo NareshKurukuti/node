@@ -1,0 +1,7 @@
+var person = {
+	name : 'Naresh Kurukuti'
+}
+	person.age = 25;
+	
+	person.name = "NK";
+	console.log(person);
