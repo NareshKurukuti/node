@@ -1,6 +1,8 @@
 console.log('Starting app.js');
 
-const fs = require('fs');
+const fs = require('fs');  //The Node.js file system module allow you to work with the file system on your computer.
+// The require() is used for include external files in our current js file
+
 const _ = require('lodash');
 const yargs = require('yargs');
 
@@ -35,8 +37,7 @@ const argv = yargs
 		})
 		.help()
 		.argv;
-console.log('Command:', command);
-//console.log(process.argv);
+console.log('Command:', command); 
 console.log('yargs', yargs.argv);
 
 if(command === 'add') {

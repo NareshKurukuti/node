@@ -2,6 +2,12 @@ console.log('Starting note.js');
 
 const fs = require('fs');
 
+/* 
+<!--notes regarding filesystem -->
+// fs.readFile() and fs.readFileSync() is used to read files on your computer.
+// The fs.writeFile() and fs.writeFileSync() method replaces the specified file and content if it exists. If the file does not exist, a new file  will be created. 
+// The fs.appendFile() method appends specified content to a file. If the file does not exist, the file will be created.
+*/
 
 /* Fetch Notes Function*/
 	var fetchNotes = () => { 
@@ -28,18 +34,15 @@ var addNote = (title, body) => {
 	var note = {
 		title,
 		body
-	} 
-	
+	}  
     var duplicateNotes = notes.filter((note) => {
 	      return note.title === title;
-	});  
-	
+	});   
 	if(duplicateNotes.length === 0 ) {  
 				notes.push(note);
 				saveNotes(notes);
 				return note; 
-	}
-	  
+	} 
 } 
 /* End Add Note */
 
@@ -70,11 +73,8 @@ var getNote = (title) => {
 /* End Get Note */
  
  /*Log Note */
- var logNote = (note) => { 
-		
-		
-		debugger;
-		
+ var logNote = (note) => {   
+		debugger; 
 		console.log('--');
 		console.log(`title: ${note.title}`);
 		console.log(`body: ${note.body}`);
